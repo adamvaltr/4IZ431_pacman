@@ -1,3 +1,4 @@
-# pacman @vala18@vse.cz
+# pacman
+by vala18@vse.cz
 
 Berkeley Pacman programming task for class 4IZ431.
