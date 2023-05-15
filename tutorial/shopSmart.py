@@ -24,13 +24,25 @@ from __future__ import print_function
 import shop
 
 
-def shopSmart(orderList, fruitShops):
+def shopSmart(orders, shops):
     """
         orderList: List of (fruit, numPound) tuples
         fruitShops: List of FruitShops
     """
-    "*** YOUR CODE HERE ***"
-    return None
+    """
+        Added a for loop that iterates over shops and calculates
+        hypothetical totalCost of purchase at particular shop.
+        The shop with lowest cost gets returned.
+    """
+    minCost = float('inf')
+    cheapestShop = None
+
+    for shop in shops:
+        totalCost = shop.getPriceOfOrder(orders)
+        if totalCost < minCost:
+            minCost = totalCost
+            cheapestShop = shop
+    return cheapestShop
 
 
 if __name__ == '__main__':
